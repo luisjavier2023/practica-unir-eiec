@@ -21,4 +21,4 @@ python3 main.py C:\Users\sebas\OneDrive\Escritorio\Maestria\SegundoCuatrimestre\
 
 - Luis Cabrera
 - Sebastián Mayorga
-- Washington
+- Washington Guerrero
