@@ -13,15 +13,15 @@ DEFAULT_ASC_DESC = True # Usar True para ascendente y False para descendente
 
 def sort_list(items, ascending=True):
     if not isinstance(items, list):
-        raise RuntimeError(f"No puede ordenar {type(items)}")
+        raise RuntimeError(f"Can't order {type(items)}")
 
     return sorted(items, reverse=(not ascending))
 
 def descending_sort_list(items, ascending=False):
     if not isinstance(items, list):
-        raise RuntimeError(f"No puede ordenar {type(items)}")
-    return sorted(items, reverse=(not ascending))
+        raise RuntimeError(f"can't order {type(items)}")
 
+    return sorted(items, reverse=(not ascending))
 
 def remove_duplicates_from_list(items):
     return list(set(items))
@@ -37,13 +37,13 @@ if __name__ == "__main__":
         remove_duplicates = sys.argv[2].lower() == "yes"
         asc_desc_value = sys.argv[3].lower() == "yes"
     else:
-        print("Se debe indicar el fichero como primer argumento")
-        print("El segundo argumento indica si se quieren eliminar duplicados")
-        print("El tercer argumento indica si el orden es ascendente o descendente")
-        print("El cuarto argumento indica si el orden es ascendente o descendente")
+        print("The file must be indicated as the first argument")
+        print("The second argument indicates whether you want to eliminate duplicates")
+        print("The third argument indicates whether the order is ascending or descending.")
+        print("The fourth argument indicates whether the order is ascending or descending.")
         sys.exit(1)
 
-    print(f"Se leerán las palabras del fichero {filename}")
+    print(f"The words from the file will be read {filename}")
     file_path = os.path.join(".", filename)
     if os.path.isfile(file_path):
         word_list = []
@@ -51,11 +51,10 @@ if __name__ == "__main__":
             for line in file:
                 word_list.append(line.strip())
     else:
-        print(f"El fichero {filename} no existe")
+        print(f"The file {filename} does not exist")
         word_list = ["ravenclaw", "gryffindor", "slytherin", "hufflepuff"]
 
     if len(sys.argv) == 5:
-        print("pasa")
         word_list.append(sys.argv[4])
 
     if remove_duplicates:
